@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IIo-iy-grB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Controller-->
+        <scene sceneID="UAr-lP-9Yd">
+            <objects>
+                <tabBarController id="IIo-iy-grB" customClass="TabController" customModule="H5MotaBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="28a-1T-2Gq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kHt-l0-YYq" kind="relationship" relationship="viewControllers" id="xx5-Dj-QVr"/>
+                        <segue destination="9K1-zi-OXd" kind="relationship" relationship="viewControllers" id="LUa-yc-ydh"/>
+                        <segue destination="WTo-bK-koB" kind="relationship" relationship="viewControllers" id="eh2-e0-9f9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VBF-n9-Ig2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="-88"/>
+        </scene>
+        <!--Online Mota-->
+        <scene sceneID="Mo4-Bm-Q23">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="kHt-l0-YYq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Online Mota" image="online" id="kVz-Nm-trY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bue-PC-OSF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="p6O-4y-Cn0" kind="relationship" relationship="rootViewController" id="cA8-oe-tcg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EvI-eg-bJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="-397"/>
+        </scene>
+        <!--Online Mota View Controller-->
+        <scene sceneID="kNF-hr-9dM">
+            <objects>
+                <viewController id="p6O-4y-Cn0" customClass="onlineMotaViewController" customModule="H5MotaBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qRC-yh-gdq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNO-bs-Tj1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SJe-jJ-yIp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oNO-bs-Tj1" firstAttribute="top" secondItem="qRC-yh-gdq" secondAttribute="top" id="bXv-SA-PuB"/>
+                            <constraint firstItem="oNO-bs-Tj1" firstAttribute="trailing" secondItem="SJe-jJ-yIp" secondAttribute="trailing" id="e21-yr-dvy"/>
+                            <constraint firstItem="oNO-bs-Tj1" firstAttribute="leading" secondItem="SJe-jJ-yIp" secondAttribute="leading" id="kP4-zX-Zkk"/>
+                            <constraint firstAttribute="bottom" secondItem="oNO-bs-Tj1" secondAttribute="bottom" id="oQb-Qe-DOB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5wS-q4-EBi"/>
+                    <connections>
+                        <outlet property="webView" destination="oNO-bs-Tj1" id="C9P-ep-Bbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9OR-7M-Tfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932.06106870229007" y="-397.88732394366201"/>
+        </scene>
+        <!--Offline Mota-->
+        <scene sceneID="DxL-lQ-RtL">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="9K1-zi-OXd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Offline Mota" image="offline" id="APF-Gb-esd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tcY-Yz-NZo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fEK-hG-Lx2" kind="relationship" relationship="rootViewController" id="4ea-TD-dJL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZo-uE-6Lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="280"/>
+        </scene>
+        <!--BBS-->
+        <scene sceneID="xcJ-iz-Imt">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="WTo-bK-koB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="BBS" image="bbs" id="hcm-56-Zuk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P97-s4-JFg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TYf-8D-Vwo" kind="relationship" relationship="rootViewController" id="dkX-HK-oki"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ino-VK-Iel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="960"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xcI-PW-dDz">
+            <objects>
+                <viewController id="fEK-hG-Lx2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWk-pb-Aht">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-4j-oqN">
+                                <rect key="frame" x="100.66666666666669" y="59" width="192" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="4jP-5P-4Gg"/>
+                                    <constraint firstAttribute="height" constant="36" id="zNM-5R-5Nv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directly Download the Mota you want from its label. Enter the label from the textfield below and click download." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc8-2x-y16">
+                                <rect key="frame" x="49.666666666666657" y="100" width="294" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hc8-2x-y16" secondAttribute="height" multiplier="294:115" id="Sbc-74-bRF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="294" id="Y7r-Hc-58t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Mota Label" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ipT-ed-JwC">
+                                <rect key="frame" x="49" y="220" width="295" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ipT-ed-JwC" secondAttribute="height" multiplier="295:38" id="020-lQ-rkY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="FoD-DP-Z7J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uw3-nE-qgG">
+                                <rect key="frame" x="49" y="266" width="295" height="44"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uw3-nE-qgG" secondAttribute="height" multiplier="295:44" id="DgK-Xi-T2g"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="LCF-ei-9jT"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Download Mota">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ser-dB-A9y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hc8-2x-y16" firstAttribute="centerX" secondItem="ser-dB-A9y" secondAttribute="centerX" id="Go9-q6-PQe"/>
+                            <constraint firstItem="uw3-nE-qgG" firstAttribute="centerX" secondItem="ser-dB-A9y" secondAttribute="centerX" id="Gsl-ia-bgP"/>
+                            <constraint firstItem="ipT-ed-JwC" firstAttribute="centerX" secondItem="ser-dB-A9y" secondAttribute="centerX" id="T6G-vf-gw4"/>
+                            <constraint firstItem="jJg-4j-oqN" firstAttribute="top" secondItem="ser-dB-A9y" secondAttribute="top" id="Y2Z-FA-CGE"/>
+                            <constraint firstItem="uw3-nE-qgG" firstAttribute="top" secondItem="ipT-ed-JwC" secondAttribute="bottom" constant="8" symbolic="YES" id="dSq-46-EOI"/>
+                            <constraint firstItem="jJg-4j-oqN" firstAttribute="centerX" secondItem="ser-dB-A9y" secondAttribute="centerX" id="lbC-Rg-atn"/>
+                            <constraint firstItem="ipT-ed-JwC" firstAttribute="top" secondItem="hc8-2x-y16" secondAttribute="bottom" constant="5" id="qGc-Xb-C1h"/>
+                            <constraint firstItem="hc8-2x-y16" firstAttribute="top" secondItem="jJg-4j-oqN" secondAttribute="bottom" constant="5" id="wcF-QN-oSb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uob-a4-hw4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcu-4U-B82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932.06106870229007" y="278.87323943661971"/>
+        </scene>
+        <!--OnlineBBS View Controller-->
+        <scene sceneID="ESB-hJ-tLo">
+            <objects>
+                <viewController id="TYf-8D-Vwo" customClass="onlineBBSViewController" customModule="H5MotaBasic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aV-Ch-dLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttT-TP-OTA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gsT-xX-68G"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ttT-TP-OTA" firstAttribute="top" secondItem="1aV-Ch-dLJ" secondAttribute="top" id="Jm3-He-Pdz"/>
+                            <constraint firstItem="ttT-TP-OTA" firstAttribute="trailing" secondItem="gsT-xX-68G" secondAttribute="trailing" id="NFS-XL-oD9"/>
+                            <constraint firstAttribute="bottom" secondItem="ttT-TP-OTA" secondAttribute="bottom" id="X8X-ml-yVw"/>
+                            <constraint firstItem="ttT-TP-OTA" firstAttribute="leading" secondItem="gsT-xX-68G" secondAttribute="leading" id="Zr7-kO-YBh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wil-3p-92a"/>
+                    <connections>
+                        <outlet property="webView" destination="ttT-TP-OTA" id="tqd-Tp-RDJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0LP-R3-8CR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930.53435114503816" y="959.85915492957747"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bbs" width="25" height="25"/>
+        <image name="offline" width="25" height="25"/>
+        <image name="online" width="25" height="25"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
